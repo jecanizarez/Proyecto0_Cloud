@@ -2,11 +2,11 @@ import React,{useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import {post_login} from '../services/User';
-import { useHistory, Link } from "react-router-dom";
+import {post_register} from '../services/User';
+import { useHistory } from "react-router-dom";
 import '../css/LoginCss.css'
 
-export default function Login(){
+export default function SignUp(){
     const history = useHistory();
     const [email, setEmail] = useState([]);
     const [password, setPassword] = useState([]);
@@ -18,8 +18,8 @@ export default function Login(){
     async function handleSubmit(event) {
       event.preventDefault();
       let data = {"email": email, "password":password}; 
-      await post_login(data);
-      history.push("/events");
+      await post_register(data);
+      history.push("/");
     }
     return(
         <div className="Login justify-content-center center text-center col-4">
@@ -41,9 +41,8 @@ export default function Login(){
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Link to="/SignUp">Registrarse</Link>
         <Button block size="lg" type="submit" disabled={!validateForm()}>
-          Login
+          Register
         </Button>
       </Form>
     </div>

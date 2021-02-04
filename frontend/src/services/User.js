@@ -8,3 +8,8 @@ export async function post_login(data){
        Cookie.set("access_token",datar.data.access_token);
    });
 }
+export async function post_register(data){
+    axios.post("http://127.0.0.1:5000/usuarios",data).then(() => {
+        console.log("registrado");
+    });
+ }

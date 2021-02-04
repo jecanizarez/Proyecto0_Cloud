@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Login from './components/Login';
 import Events from './components/Events'; 
+import SignUp from './components/SignUp'; 
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -12,6 +13,7 @@ ReactDOM.render(
     <Switch>
       <Route exact path = "/" component={Login}/>
       <Route exact path = "/events" component = {Events} />
+      <Route exact path = "/SignUp" component = {SignUp} />
     </Switch>
     </BrowserRouter>
   </React.StrictMode>,
