@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Cookie from 'js-cookie';
 
-const url = "http://127.0.0.1:5000/eventos"
+const url = "http://172.24.98.90/eventos"
 
 export async function get_Events(){
     axios.defaults.headers.common['Authorization'] = 

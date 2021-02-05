@@ -1,7 +1,7 @@
 import axios from "axios";
 import Cookie from "js-cookie";
 
-const url = "http://127.0.0.1:5000/login"
+const url = "http://172.24.98.90/login"
 
 export async function post_login(data){
    axios.post(url,data).then((datar) => {
@@ -9,7 +9,7 @@ export async function post_login(data){
    });
 }
 export async function post_register(data){
-    axios.post("http://127.0.0.1:5000/usuarios",data).then(() => {
+    axios.post("http://172.24.98.90/usuarios",data).then(() => {
         console.log("registrado");
     });
  }
